@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+body{
+    background-color: #1a1c1e;
+}
+
+.container{
+    position: absolute;
+    width: 600px;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -8px;
+    margin-bottom: -8px;
+    background-color: black;
+}
+
+.result{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 540px;
+}
+
+#operatorInfo{
+    position: absolute;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color:white;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#resultInput{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 100px;
+    margin-bottom: 120px;
+    position: inherit;
+    margin-top: 0;
+    width: 100%;
+    text-align: right;
+    color: honeydew;
+}
+
+.operators{
+    margin-top: -100px;
+    width: 600px;
+}
+
+.numpad{
+    margin-top: 15px;
+}
+
+
+
+button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    margin-left: 35px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: darkgray;
+    border: 0;
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+.side{
+    background-color: orange;
+}
+
+.inside{
+    background-color: #4A4A4A;
+}
+
+#zero{
+    height: 90px;
+    width: 215px;
+    border-radius: 55px;
+    margin-left: 60px;
+}
+
+#first{
+    margin-left: 60px;
+}

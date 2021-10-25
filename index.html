@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Kalkulator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="result">
+      <p id="operatorInfo"></p>
+      <p id="resultInput">0</p>
+    </div>
+    <div class="operators">
+      <div class="numpad">
+        <button onclick="clearNumpad()" class="top" id="first">AC</button>
+        <button class="top">+/-</button>
+        <button class="top">%</button>
+        <button onclick="pushOperator('/')" class="side">÷</button>
+      </div>
+      <div class="numpad">
+        <button onclick="pushNumber(7)" class="inside" id="first">7</button>
+        <button onclick="pushNumber(8)" class="inside">8</button>
+        <button onclick="pushNumber(9)" class="inside">9</button>
+        <button onclick="pushOperator('x')" class="side">X</button>
+      </div>
+      <div class="numpad">
+        <button onclick="pushNumber(4)" class="inside" id="first">4</button>
+        <button onclick="pushNumber(5)" class="inside">5</button>
+        <button onclick="pushNumber(6)" class="inside">6</button>
+        <button onclick="pushOperator('-')" class="side">-</button>
+      </div>
+      <div class="numpad">
+        <button onclick="pushNumber(1)" class="inside" id="first">1</button>
+        <button onclick="pushNumber(2)" class="inside">2</button>
+        <button onclick="pushNumber(3)" class="inside">3</button>
+        <button class="side" onclick="pushOperator('+')">+</button>
+      </div>
+      <div class="numpad">
+        <button class="inside" id="zero" onclick="pushNumber(0)">0</button>
+        <button class="inside">.</button>
+        <button onclick="pushOperator('=')" class="side">=</button>
+      </div>
+    </div> 
+  </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
