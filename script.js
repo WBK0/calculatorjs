@@ -16,6 +16,15 @@ const clearNumpad = () => {
     document.getElementById("resultInput").innerHTML = "0";
 }
 
+const pushPercent = () => {
+    if (!a.includes("%")){
+        a = a + "%";
+        a = a.toString();
+        document.getElementById("resultInput").innerHTML = a;
+        console.log()
+    }
+}
+
 const pushNumber = (number) => {
     if (isFirstOperator){
         c = a;
@@ -39,6 +48,16 @@ const pushNumber = (number) => {
     document.getElementById("resultInput").innerHTML = a;
 }
 
+const pushDot = () => {
+    if (!a.includes(".")){
+        a = a + ".";
+        a = a.toString();
+        document.getElementById("resultInput").innerHTML = a;
+    }
+
+}
+
+
 const pushOperator = (operator) => {
     document.getElementById("operatorInfo").innerHTML = operator;
     if (c !== ""){
@@ -53,37 +72,39 @@ const pushOperator = (operator) => {
         isFirstOperator = true;
     }else{
         if (artimeticalOperator === '+'){
-           
-            a = parseInt(a)
-            b = parseInt(b)
+            if (a.includes("%")){
+                a = parseFloat(a) * 0.01;
+            }
+            a = parseFloat(a)
+            b = parseFloat(b)
             b = b + a
             document.getElementById("resultInput").innerHTML = b;
         }
         if (artimeticalOperator === '-'){
            
-            a = parseInt(a)
-            b = parseInt(b)
+            a = parseFloat(a)
+            b = parseFloat(b)
             b = b - a
             document.getElementById("resultInput").innerHTML = b;
         }
         if (artimeticalOperator === 'x'){
            
-            a = parseInt(a)
-            b = parseInt(b)
+            a = parseFloat(a)
+            b = parseFloat(b)
             b = b * a
             document.getElementById("resultInput").innerHTML = b;
         }
         if (artimeticalOperator === '='){
            
-            a = parseInt(a)
-            b = parseInt(b)
+            a = parseFloat(a)
+            b = parseFloat(b)
             b = b
             document.getElementById("resultInput").innerHTML = b;
         }
         if (artimeticalOperator === '/'){
             
-            a = parseInt(a)
-            b = parseInt(b)
+            a = parseFloat(a)
+            b = parseFloat(b)
             b = b/a
             document.getElementById("resultInput").innerHTML = b;
         }

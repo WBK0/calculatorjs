@@ -16,7 +16,7 @@
       <div class="numpad">
         <button onclick="clearNumpad()" class="top" id="first">AC</button>
         <button class="top">+/-</button>
-        <button class="top">%</button>
+        <button onclick="pushPercent()" class="top">%</button>
         <button onclick="pushOperator('/')" class="side">÷</button>
       </div>
       <div class="numpad">
@@ -39,7 +39,7 @@
       </div>
       <div class="numpad">
         <button class="inside" id="zero" onclick="pushNumber(0)">0</button>
-        <button class="inside">.</button>
+        <button class="inside" onclick="pushDot()">.</button>
         <button onclick="pushOperator('=')" class="side">=</button>
       </div>
     </div> 
